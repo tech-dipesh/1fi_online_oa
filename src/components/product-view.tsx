@@ -37,7 +37,7 @@ export default function ProductView({ product }: ProductViewProps): ReactElement
   return (
     <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
       <div className="relative h-96 w-full overflow-hidden rounded-2xl bg-neutral-100">
-        <Image src={selectedVariant.imageUrl} alt={product.name} fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
+        <Image src={selectedVariant.imageUrl} alt={product.name} loading="eager" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
       </div>
 
       <div>

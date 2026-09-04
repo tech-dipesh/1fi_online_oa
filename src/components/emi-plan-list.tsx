@@ -18,7 +18,7 @@ export default function EmiPlanList({ plans, selectedTenure, onSelectAction }: E
           <button
             key={plan.tenureMonths}
             type="button"
-            onClick={() => onSelect(plan.tenureMonths)}
+            onClick={() => onSelectAction(plan.tenureMonths)}
             className={
               isSelected
                 ? "flex items-center justify-between rounded-xl border-2 border-brand bg-brand/5 px-4 py-3 text-left"
