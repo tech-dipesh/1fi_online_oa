@@ -6,3 +6,14 @@ export type EmiPlan = {
   cashbackPercent: number
   totalPayable: number
 }
+
+export type VariantWithPlans = {
+  id: string
+  label: string
+  storage: string | null
+  color: string | null
+  mrp: number
+  price: number
+  imageUrl: string
+  emiPlans: EmiPlan[]
+}
