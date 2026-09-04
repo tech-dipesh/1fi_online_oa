@@ -7,6 +7,8 @@
     "type": "tsc --noEmit",
     "generate": "prisma generate",
     "migrate": "prisma migrate dev",
+    "pull": "prisma db pull",
+    "reset": "prisma migrate reset",
     "push": "prisma db push",
     "seed": "tsx prisma/seed.ts",
     "studio": "prisma studio"

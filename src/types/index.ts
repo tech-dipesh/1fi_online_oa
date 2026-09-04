@@ -17,3 +17,21 @@ export type VariantWithPlans = {
   imageUrl: string
   emiPlans: EmiPlan[]
 }
+
+export type ProductWithVariants = {
+  id: string
+  slug: string
+  name: string
+  brand: string
+  description: string
+  variants: VariantWithPlans[]
+}
+
+export type ProductSummary = {
+  id: string
+  slug: string
+  name: string
+  brand: string
+  startingPrice: number
+  imageUrl: string
+}
