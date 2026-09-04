@@ -1,13 +1,14 @@
 import db from "@/lib/db"
 import { buildEmiPlans } from "@/lib/emi"
 import { createSelectionSchema } from "@/lib/validation"
+import z from "zod"
 
 export async function POST(request: Request): Promise<Response> {
   const body: unknown = await request.json()
   const parsedBody = createSelectionSchema.safeParse(body)
 
   if (!parsedBody.success) {
-    return Response.json({ error: parsedBody.error.flatten() }, { status: 400 })
+    return Response.json({ error: z.flattenError(parsedBody.error) }, { status: 400 })
   }
 
   const { variantId, tenureMonths } = parsedBody.data
