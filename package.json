@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "next dev",
-    "build": "tsx prisma/seeed.ts && prisma db push && next build",
+    "build": "tsx prisma/seed.ts && prisma db push && next build",
     "start": "next start",
     "lint": "eslint .",
     "type": "tsc --noEmit",
